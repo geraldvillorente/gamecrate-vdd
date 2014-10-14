@@ -1,0 +1,31 @@
+{
+  "name": "precise32",
+  "box_url": "http://files.vagrantup.com/precise32.box",
+  "hostname": "drupal.dev.vdd",
+  // The key is used as a drush alias
+  "aliases": {
+    "gamecrate": "local.gamecrate.dev"
+  },
+  "account_name": "admin",
+  "account_pass": "password",
+  "account_mail": "info@example.com",
+  "ip": "192.168.44.46",
+  "synced_folder": {
+    "host_path": "./docroot",
+    "guest_path": "/var/www"
+  },
+  "vm_gui": false,
+  "vm_name": "drupal-dev-vdd",
+  "ports": {
+    "http_host_varnish": 8383,
+    "http_guest_varnish": 80,
+    "https_host": 8443,
+    "https_guest": 443,
+    "http_guest_apache": 1000,
+    "http_host_apache": 10000
+  },
+  "memory": 1024,
+  // Set to false if your system don't support NFS
+  "nfs": true,
+  "sync_type": "rsync"
+}
